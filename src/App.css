@@ -1,0 +1,234 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Main App Container */
+.quiz-app-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz-app-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Question Component Styles */
+.question-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #e0e0e0;
+}
+
+.progress-container {
+    margin-bottom: 1.5rem;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #1976d2;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.question-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.option-button {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    color:#000000;
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.option-button:hover {
+    background-color: #e3f2fd;
+    border-color: #1976d2;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.15);
+}
+
+.option-button:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.option-label {
+    font-weight: bold;
+    color: #1976d2;
+    margin-right: 0.5rem;
+    min-width: 20px;
+}
+
+/* Results Component Styles */
+.results-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 3rem 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.results-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.score-container {
+    margin-bottom: 2rem;
+}
+
+.score-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #1976d2, #42a5f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.percentage-text {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.message-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.result-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1976d2, #4caf50);
+    transition: width 1s ease;
+    border-radius: 4px;
+}
+
+.restart-button {
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.restart-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+}
+
+.restart-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quiz-app-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .quiz-app-title {
+        font-size: 2rem;
+    }
+
+    .question-container,
+    .results-container {
+        margin: 0 0.5rem;
+        padding: 1.5rem;
+    }
+
+    .score-text {
+        font-size: 2.5rem;
+    }
+
+    .option-button {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-app-title {
+        font-size: 1.8rem;
+    }
+    
+    .question-text {
+        font-size: 1.1rem;
+    }
+    
+    .score-text {
+        font-size: 2rem;
+    }
+    
+    .message-text {
+        font-size: 1.2rem;
+    }
+    
+    .option-button {
+        padding: 0.625rem;
+    }
+}
